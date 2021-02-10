@@ -1,0 +1,12 @@
+@import "colors.scss";
+
+.not-found {
+  line-height: 3rem;
+  .not-found--shrug-face {
+    font-size: 3rem;
+  }
+  .not-found--text {
+    font-family: "VT323", monospace;
+    font-size: 2rem;
+  }
+}

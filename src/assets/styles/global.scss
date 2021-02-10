@@ -1,0 +1,81 @@
+@import "colors.scss";
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+
+html {
+  display: block;
+}
+
+html,
+body {
+  width: 100%;
+  margin: 0;
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.8rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  color: $lightest;
+  background-color: $darkest;
+}
+
+body.theme-light {
+  color: $darkest;
+  background-color: $lighter;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+ul {
+  list-style: disc;
+}
+
+ul li {
+  margin: 1rem;
+}
+
+input:focus {
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+}
+
+button.active.focus,
+button.active:focus,
+button.focus,
+button:active.focus,
+button:active:focus,
+button:focus {
+  outline: none;
+  box-shadow: none;
+  background-color: $lightest;
+}
+
+.background {
+  background-color: transparent;
+  /*
+  background-image: url(../images/background-blue-waves02.svg);
+  background-repeat: no-repeat;
+  */
+}
+
+.container {
+  min-height: 100vh;
+}
+
+@media (min-width: 1400px) {
+  body {
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+}

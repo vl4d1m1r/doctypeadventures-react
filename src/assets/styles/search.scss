@@ -1,0 +1,24 @@
+@import "colors.scss";
+
+.search {
+  margin-top: 0rem;
+  input {
+    background-color: transparent;
+    border-color: $dark-gray;
+  }
+  .search--icon {
+    width: 1.2rem;
+    margin-bottom: 0.2rem;
+  }
+  .btn-outline-secondary {
+    color: white;
+    background-color: $color-primary;
+    border: 1px solid $dark-gray;
+  }
+}
+
+@media (min-width: 992px) {
+  .search {
+    margin-top: 2rem;
+  }
+}

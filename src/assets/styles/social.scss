@@ -1,0 +1,37 @@
+@import "colors.scss";
+
+.blog {
+  .post {
+    .social-integration {
+      button {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        padding: 3px 10px 2px 8px;
+        margin-right: 1rem;
+        border: none;
+        border-radius: 4px;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
+        text-decoration: none;
+        font-family: "Open Sans", Helvetica, Arial, sans-serif;
+        font-weight: 600;
+        font-size: 0.8rem;
+        color: #ffffff;
+      }
+      button:last-child {
+        margin-right: 0;
+      }
+      button img {
+        width: 18px;
+        height: 18px;
+        margin-right: 5px;
+      }
+      .social-integration--facebook {
+        background-color: #4a66b7;
+      }
+      .social-integration--twitter {
+        background-color: #1b95e0;
+      }
+    }
+  }
+}

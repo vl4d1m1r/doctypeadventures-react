@@ -1,0 +1,96 @@
+@import "colors.scss";
+
+.blog {
+  .post {
+    margin: 2rem 0 1rem 0;
+    .post--category,
+    .post--headline,
+    .post--image-copyright,
+    .post--content {
+      margin-bottom: 1rem;
+    }
+    .post--category {
+      display: inline-block;
+      padding: 0.3rem 0.5rem;
+      color: white;
+      background-color: $color-highlight;
+      margin-right: 1rem;
+    }
+    .post--date {
+      font-weight: bold;
+      display: inline-block;
+    }
+    .post--headline h1 {
+      font-family: VT323, monospace;
+      font-size: 3rem;
+    }
+    .post--image img {
+      width: 100%;
+      min-height: 100px;
+      height: auto;
+      background-image: url(../images/animations/loading-animation.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    figcaption,
+    .post--image-copyright {
+      font-size: 0.8rem;
+      font-family: "PT Sans", sans-serif;
+      color: $light-gray;
+    }
+    figcaption {
+      text-align: center;
+    }
+    .wp-block-image img {
+      width: 100%;
+      height: auto;
+    }
+    .post--content a {
+      color: $color-primary;
+    }
+    .post--read-more {
+      font-family: "VT323", monospace;
+      border-radius: 5px;
+      padding: 5px 10px;
+      margin-right: 1rem;
+      color: $lightest;
+      background-color: $color-primary;
+      border: 1px solid $color-primary;
+      margin-bottom: 1rem;
+      cursor: pointer;
+    }
+    .post--read-more::after {
+      content: " >>";
+    }
+    .post--read-more:hover {
+      background-color: $darker;
+      border: 1px solid $color-primary;
+    }
+    .post--footer {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    pre {
+      border-radius: 5px;
+      padding: 1rem;
+      background-color: $code-background;
+      color: $code-color;
+    }
+    code {
+      font-family: Menlo, Consolas, monaco, monospace;
+    }
+    p.block-img img {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .blog {
+    .post {
+      .post--headline h1 {
+        font-size: 4rem;
+      }
+    }
+  }
+}

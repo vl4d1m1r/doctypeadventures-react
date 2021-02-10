@@ -1,0 +1,26 @@
+@import "colors.scss";
+
+.pagination {
+  .pagination--button {
+    min-width: 4rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    color: $light;
+    border: 1px solid $dark-gray;
+    background-color: $darker;
+  }
+  button:focus {
+    outline: 0;
+    box-shadow: none;
+  }
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 992px) {
+  .pagination {
+    .pagination--button {
+      min-width: 6rem;
+      padding: 1rem;
+    }
+  }
+}
