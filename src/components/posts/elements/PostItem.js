@@ -43,6 +43,18 @@ const PostItem = (props) => {
         <Tags tags={tags} />
       </div>
       {props.singlePost && <Social post={props.post} />}
+      {props.singlePost && (
+        <div>
+          <div>-------------</div>
+          <div
+            className='fb-comments'
+            data-href={window.location.href}
+            data-width=''
+            colorscheme='dark'
+            data-numposts='15'
+          ></div>
+        </div>
+      )}
     </article>
   );
 };
