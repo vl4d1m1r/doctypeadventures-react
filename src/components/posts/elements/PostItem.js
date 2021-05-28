@@ -21,30 +21,10 @@ const PostItem = (props) => {
   }
 
   useEffect(() => {
-    console.log("RABR BEJBI BAGI BAMPRS");
-    window.fbAsyncInit = function () {
-      window.FB.init({
-        appId: "958449331300080",
-        autoLogAppEvents: true,
-        xfbml: true,
-        version: "v3.0",
-      });
+    if (window.FB) {
       window.FB.XFBML.parse();
-      console.log("This happened...");
-    };
-
-    (function (d, s, id) {
-      var js,
-        fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) {
-        return;
-      }
-      js = d.createElement(s);
-      js.id = id;
-      js.src = "https://connect.facebook.net/en_US/sdk.js";
-      fjs.parentNode.insertBefore(js, fjs);
-    })(document, "script", "facebook-jssdk");
-  });
+    }
+  }, []);
 
   return (
     <article className='post'>
@@ -70,12 +50,13 @@ const PostItem = (props) => {
       </div>
       {props.singlePost && <Social post={props.post} />}
       {props.singlePost && (
-        <div>
-          <div>-------------</div>
+        <div className='post--facebook-comments mb-5'>
           <div
             className='fb-comments'
             data-href={window.location.href}
-            data-width=''
+            data-width='100%'
+            data-order-by='reverse_time'
+            data-colorscheme='dark'
             data-numposts='15'
           ></div>
         </div>
