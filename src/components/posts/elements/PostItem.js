@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { StateContext } from "../../../context/Context";
 import { NavLink } from "react-router-dom";
 import { Parser } from "html-to-react";
@@ -19,6 +19,32 @@ const PostItem = (props) => {
   if (props.singlePost) {
     postContent = htmlParser.parse(props.post.content.rendered);
   }
+
+  useEffect(() => {
+    console.log("RABR BEJBI BAGI BAMPRS");
+    window.fbAsyncInit = function () {
+      window.FB.init({
+        appId: "958449331300080",
+        autoLogAppEvents: true,
+        xfbml: true,
+        version: "v3.0",
+      });
+      window.FB.XFBML.parse();
+      console.log("This happened...");
+    };
+
+    (function (d, s, id) {
+      var js,
+        fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {
+        return;
+      }
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    })(document, "script", "facebook-jssdk");
+  });
 
   return (
     <article className='post'>
@@ -50,7 +76,6 @@ const PostItem = (props) => {
             className='fb-comments'
             data-href={window.location.href}
             data-width=''
-            colorscheme='dark'
             data-numposts='15'
           ></div>
         </div>
