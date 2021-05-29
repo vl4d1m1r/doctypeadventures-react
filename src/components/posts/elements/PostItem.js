@@ -48,18 +48,20 @@ const PostItem = (props) => {
         )}
         <Tags tags={tags} />
       </div>
-      {props.singlePost && <Social post={props.post} />}
       {props.singlePost && (
-        <div className='post--facebook-comments mb-5'>
-          <div
-            className='fb-comments'
-            data-href={window.location.href}
-            data-width='100%'
-            data-order-by='reverse_time'
-            data-colorscheme='dark'
-            data-numposts='15'
-          ></div>
-        </div>
+        <React.Fragment>
+          <Social post={props.post} />
+          <div className='post--facebook-comments mb-5 mt-5'>
+            <div
+              className='fb-comments'
+              data-href={window.location.href}
+              data-width='100%'
+              data-order-by='reverse_time'
+              data-colorscheme='dark'
+              data-numposts='15'
+            ></div>
+          </div>
+        </React.Fragment>
       )}
     </article>
   );

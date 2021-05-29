@@ -31,7 +31,7 @@ const Social = (props) => {
   };
 
   return (
-    <div className='social-integration mb-3'>
+    <div className='social-integration'>
       {socialButtons.map((button) => {
         return (
           <button
