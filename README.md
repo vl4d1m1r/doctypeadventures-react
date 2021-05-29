@@ -39,6 +39,10 @@ to prevent 404 error
 
 This app gets it's blog content from [Wordpress API](https://developer.wordpress.org/rest-api/) which means that you must host Wordpress installation somewhere. The free plan on Wordpress.com website will NOT do the trick because of (in the time of writing) the obsolete api version used.
 
+## Edit 2021-05-29
+
+* Facebook comments added to individual posts.
+
 ## Copyright Information
 
 MIT License
