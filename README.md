@@ -21,13 +21,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 1. Bootstrap 5
 
 2. React-router-dom
-   npm install react-router-dom
+   `npm install react-router-dom`
 
 3. Node-sass
-   npm install sass-loader sass webpack --save-dev
+   `npm install sass-loader sass webpack --save-dev`
 
 4. React-helmet
-   npm install react-helmet
+   `npm install react-helmet`
 
 ## Prevent 404 error on serverless hosting
 
